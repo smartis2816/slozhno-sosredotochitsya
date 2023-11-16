@@ -6,9 +6,12 @@
 :root {
   --background-color: #000028;
   --title-color: #DB00FF;
-  --title-shadow-color: #FF0070;
-  --heading-background-color: var(--title-shadow-color);
-  --heading-color: var(--background-color);
-  --heading2-color: var(--title-shadow-color);
-
+  --accent-color: #ff0070;
+  --main-text-color: #F1B2CE;
+  --menu-color: var(--accent-color);
+  --decor-color: var(--accent-color);
+  --title-shadow-color: var(--accent-color);
+  --box-heading-color: var(--background-color);
+  --box-background-color: var(--accent-color);
+  --heading-color: var(--accent-color);
 }
