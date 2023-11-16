@@ -2,4 +2,115 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--background-color);
+}
+
+.header {
+  position: relative;
+  padding: 0 10px;
+}
+
+.header__rec {
+  position: absolute;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  top: 10px;
+  right: 38px;
+  line-height: 25px;
+}
+
+.header__rec::after {
+  content: "";
+  margin-left: 10px;
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0px 0px 4px 3px var(--accent-color);
+  top: 35%;
+  
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 10px;
+  top: 10px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 10px;
+  bottom: 10px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-list {
+  padding-top: 76.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 11.5px;
+  align-items: flex-end;
+}
+
+.header__theme-menu-button {
+  color: var(--accent-color);
+  line-height: 18px;
+  padding: 4px 12px;
+  text-transform: lowercase;
+  border: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--hover-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: var(--accent-color);
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
+}
+
+.header__title-container {
+  padding-bottom: 66px;
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+}
+
+.header__title {
+  color: var(--title-color);
+  text-shadow: 4px 4px 0px var(--accent-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 82.5%;
+}
+
+.header__description {
+  color: var(--box-heading-color);
+  margin: 0 10px;
+  font-weight: 700;
+  line-height: 23.4px;
+  font-weight: 700;
+}
+
+.title-decor {
+  background: var(--accent-color);
 }
