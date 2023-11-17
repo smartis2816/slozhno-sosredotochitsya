@@ -2,6 +2,10 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  
+  background: url(../images/cover-image-dark.png) no-repeat top center;
+  /* background-size: auto; */
+  background-attachment: fixed;
   background-color: var(--background-color);
 }
 
@@ -39,8 +43,8 @@
   height: 25px;
   right: 10px;
   top: 10px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
 }
 
 .decorated-zone::before {
@@ -50,8 +54,8 @@
   height: 25px;
   left: 10px;
   bottom: 10px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
 }
 
 .header__theme-menu-list {
@@ -86,6 +90,7 @@
 
 .header__theme-menu-button_active {
   outline: 1px solid var(--accent-color);
+  pointer-events: none;
 }
 
 .header__title-container {
@@ -103,14 +108,58 @@
   line-height: 82.5%;
 }
 
-.header__description {
-  color: var(--box-heading-color);
+/* .header__subtitle {
   margin: 0 10px;
+} */
+
+.subtitle {
+  background: var(--accent-color);
+  color: var(--box-heading-color);
+  font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
-  font-weight: 700;
 }
 
-.title-decor {
-  background: var(--accent-color);
+.main {
+  /* margin-block-start: 40px; */
+  padding: 0 10px;
+}
+
+.content {
+  margin-block-start: 50px;
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.content__title {
+  color: var(--accent-color);
+  font-weight: 700;
+  line-height: 23.4px;
+  padding-bottom: 20px;
+}
+
+.content__article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.thin-text {
+  font-weight: 400;
+}
+
+.content__images {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 10px;
+}
+
+.content__image {
+  max-width: 100%;
+}
+
+
+.footer {
+  position: relative;
+  padding: 0 10px;
 }
