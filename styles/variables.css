@@ -5,12 +5,13 @@
 
 :root {
   --background-color: #000028;
-  --title-color: #DB00FF;
+  --background-img: url(../images/cover-image-dark.png);
   --accent-color: #ff0070;
+  --title-color: #DB00FF;
+  --title-shadow-color: var(--accent-color);
   --main-text-color: #F1B2CE;
   --menu-color: var(--accent-color);
   --hover-color: rgba(255, 0, 112, 0.40);
-  --decor-color: var(--accent-color);
   --title-shadow-color: var(--accent-color);
   --box-heading-color: var(--background-color);
   --box-background-color: var(--accent-color);

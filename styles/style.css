@@ -3,8 +3,7 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   
-  background: url(../images/cover-image-dark.png) no-repeat top center;
-  /* background-size: auto; */
+  background: var(--background-img) no-repeat top center;
   background-attachment: fixed;
   background-color: var(--background-color);
 }
@@ -85,7 +84,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
 }
 
 .header__theme-menu-button_active {
@@ -102,18 +101,14 @@
 
 .header__title {
   color: var(--title-color);
-  text-shadow: 4px 4px 0px var(--accent-color);
+  text-shadow: 4px 4px 0px var(--title-shadow-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 82.5%;
 }
 
-/* .header__subtitle {
-  margin: 0 10px;
-} */
-
 .subtitle {
-  background: var(--accent-color);
+  background: var(--box-background-color);
   color: var(--box-heading-color);
   font-size: 18px;
   font-weight: 700;
@@ -121,7 +116,6 @@
 }
 
 .main {
-  /* margin-block-start: 40px; */
   padding: 0 10px;
 }
 
@@ -129,13 +123,17 @@
   margin-block-start: 50px;
   display: grid;
   grid-template-columns: auto;
+  gap: 20px;
+}
+
+.content:first-child {
+  margin-block-start: 40px;
 }
 
 .content__title {
-  color: var(--accent-color);
+  color: var(--heading-color);
   font-weight: 700;
   line-height: 23.4px;
-  padding-bottom: 20px;
 }
 
 .content__article {
@@ -144,8 +142,27 @@
   gap: 10px;
 }
 
+.content__article-text {
+  line-height: 23.4px;
+  color: var(--main-text-color);
+}
+
 .thin-text {
   font-weight: 400;
+}
+
+.content__link {
+  text-decoration: none;
+  line-height: normal;
+  text-shadow: 3px 3px 0px var(--accent-color);
+}
+
+.content__link:hover {
+  border-bottom: 1px solid var(--main-text-color);
+}
+
+.content__link:focus {
+  outline: 1px solid var(--main-text-color);
 }
 
 .content__images {
@@ -155,11 +172,19 @@
 }
 
 .content__image {
-  max-width: 100%;
+  width: 100%;
 }
 
-
 .footer {
+  margin-block-start: 40px;
   position: relative;
-  padding: 0 10px;
+  padding: 286px 10px;
+}
+
+.footer__title {
+  color: var(--title-color);
+  text-shadow: 2px 2px 0px var(--title-shadow-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 82.5%;
 }
