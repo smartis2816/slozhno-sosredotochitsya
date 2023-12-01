@@ -5,12 +5,15 @@
 */
 
 .page.theme_dark {
+  --title-font-size-desktop-tablet: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --title-font-size-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --background-color: #000028;
   --background-img: url(../images/cover-image-dark.png);
   --accent-color: #ff0070;
   --title-color: #DB00FF;
   --title-shadow-color: var(--accent-color);
   --main-text-color: #F1B2CE;
+  --link-shadow-color:var(--accent-color);
   --menu-color: var(--accent-color);
   --hover-color: rgba(255, 0, 112, 0.40);
   --title-shadow-color: var(--accent-color);
